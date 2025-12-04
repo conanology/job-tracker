@@ -104,7 +104,7 @@ def scrape_generic_jobs(url):
                             'company': company.text.strip() if company else 'N/A',
                             'position': title.text.strip(),
                             'skills': 'N/A',
-                            'link': link.get('href', '') if link else '',
+                            'link': link.get('hre', '') if link else '',
                             'source': url
                         })
                 except (AttributeError, KeyError):
@@ -180,7 +180,7 @@ def main():
 
     # Display sample
     if len(df) > 0:
-        print(f"\n[DATA] Top 5 jobs:")
+        print("\n[DATA] Top 5 jobs:")
         print(df.head())
 
 
