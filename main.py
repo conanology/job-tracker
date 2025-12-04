@@ -33,7 +33,7 @@ def scrape_data(url):
     response = requests.get(url, headers=headers)
     response.raise_for_status()
 
-    soup = BeautifulSoup(response.content, 'html.parser')
+    soup = BeautifulSoup(response.content, 'html.parser')  # noqa: F841
 
     # TODO: Implement actual scraping logic
     # This is a template - customize per project
